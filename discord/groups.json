@@ -1,0 +1,45 @@
+{
+    "groups":{
+        "staff":{
+            "roleIDs":[
+                "1469245319014514790"
+            ],
+            "userIDs":[
+                
+            ],
+            "blacklistedRoleIDs":[
+                
+            ],
+            "blacklistedUserIDs":[
+                
+            ]
+        }
+    },
+    "commands":{
+        "about":{
+            "enabled":true,
+            "everyoneCanUse":false,
+            "group":"staff"
+        },
+        "search":{
+            "enabled":true,
+            "everyoneCanUse":false,
+            "group":"staff"
+        },
+        "apikey":{
+            "enabled":true,
+            "everyoneCanUse":false,
+            "group":"staff"
+        },
+        "execute":{
+            "enabled":true,
+            "everyoneCanUse":false,
+            "group":"staff"
+        },
+        "players":{
+            "enabled":true,
+            "everyoneCanUse":false,
+            "group":"staff"
+        }
+    }
+}
