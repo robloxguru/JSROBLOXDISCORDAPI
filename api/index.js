@@ -112,7 +112,7 @@ DB.init();
 const app = express();
 app.use(express.json());
 
-const PRESET_RAUTH_HASH = "55e9fc44bdd4088c906e0a4b9c274dd8c0ee342679c288cb506569060b0641e0";
+const PRESET_RAUTH_HASH = "RAUTH_HASHED";
 const RATE_LIMIT_WINDOW = 10 * 1000;
 const MAX_REQUESTS = 5;
 const STALE_MS = 10 * 1000;
@@ -354,3 +354,4 @@ setInterval(() => {
     });
 
 }, 5000);
+
