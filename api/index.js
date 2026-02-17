@@ -15,9 +15,7 @@ dotenv.config({ path: path.resolve('config/dc/config.env') });
 
 const client = new Client({
     intents: [
-        GatewayIntentBits.Guilds,
-        GatewayIntentBits.GuildMessages,
-        GatewayIntentBits.MessageContent
+        GatewayIntentBits.Guilds
     ]
 });
 
@@ -30,16 +28,6 @@ for (const file of commandFiles) {
     const filePath = path.join(commandsPath, file);
     const { data, execute } = await import(pathToFileURL(filePath).href);
     client.commands.set(data.name, { data, execute });
-}
-
-const listenersPath = path.join(process.cwd(), 'discord', 'cogs', 'listeners');
-const listenerFiles = fs.readdirSync(listenersPath).filter(f => f.endsWith('.js'));
-
-for (const file of listenerFiles) {
-    const filePath = path.join(listenersPath, file);
-    const { event, once, listener } = await import(filePath);
-    if (once) client.once(event, (...args) => listener(...args, client));
-    else client.on(event, (...args) => listener(...args, client));
 }
 
 client.once('clientReady', async () => {
@@ -367,3 +355,4 @@ setInterval(() => {
     });
 
 }, 5000);
+
