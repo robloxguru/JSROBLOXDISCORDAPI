@@ -125,7 +125,7 @@ DB.init();
 const app = express();
 app.use(express.json());
 
-const PRESET_RAUTH_HASH = "HASHED_KEY_HERE";
+const PRESET_RAUTH_HASH = "SHA256_HASHED_KEY_HERE";
 const RATE_LIMIT_WINDOW = 10 * 1000;
 const MAX_REQUESTS = 5;
 const STALE_MS = 10 * 1000;
@@ -365,4 +365,5 @@ setInterval(() => {
             });
         }
     });
+
 }, 5000);
